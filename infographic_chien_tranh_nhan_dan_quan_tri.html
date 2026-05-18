@@ -1,0 +1,248 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+.wrap{font-family:'Be Vietnam Pro',var(--font-sans),sans-serif;background:linear-gradient(160deg,#0a2540 0%,#0f3460 60%,#162040 100%);color:#fff;padding:0;width:100%}
+.hdr{background:linear-gradient(135deg,#F04E37 0%,#FF6B35 50%,#F7C35F 100%);padding:28px 32px 20px;text-align:center;position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.08)}
+.hdr::after{content:'';position:absolute;bottom:-30px;left:-20px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.06)}
+.hdr-title{font-size:26px;font-weight:900;letter-spacing:-.5px;text-shadow:0 2px 8px rgba(0,0,0,.3);position:relative}
+.hdr-sub{font-size:13px;font-weight:600;opacity:.9;margin-top:6px;letter-spacing:1px;text-transform:uppercase;position:relative}
+.hdr-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:4px 14px;font-size:12px;font-weight:600;margin-top:10px;position:relative}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:3px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;padding:0 3px 3px}
+.card{padding:20px;position:relative;overflow:hidden}
+.card-1{background:linear-gradient(135deg,#1a1a4e 0%,#2d2d8a 100%)}
+.card-2{background:linear-gradient(135deg,#1a3a2a 0%,#0f6e56 100%)}
+.card-3{background:linear-gradient(135deg,#3a1a1a 0%,#8a3a00 100%)}
+.card-4{background:linear-gradient(135deg,#3a1a3a 0%,#6a2080 100%)}
+.card-5{background:linear-gradient(135deg,#1a2a3a 0%,#0c447c 100%)}
+.card-6{background:linear-gradient(135deg,#2a1a1a 0%,#8a2050 100%)}
+.card-full{background:linear-gradient(135deg,#1a2030 0%,#253550 100%);padding:20px 24px;margin:3px}
+.card-quote{background:linear-gradient(135deg,#0a1a10 0%,#0f3a20 100%);padding:20px 24px;margin:0 3px 3px}
+.c-tag{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.15);border-radius:12px;padding:3px 10px;font-size:11px;font-weight:600;margin-bottom:12px;letter-spacing:.5px}
+.c-title{font-size:16px;font-weight:700;margin-bottom:8px;line-height:1.3}
+.c-sub{font-size:12px;opacity:.75;margin-bottom:14px;line-height:1.5}
+.item{display:flex;align-items:flex-start;gap:8px;margin-bottom:8px}
+.dot{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;margin-top:1px}
+.item-text{font-size:12px;line-height:1.5;opacity:.9}
+.item-bold{font-weight:600;opacity:1}
+/* Fractal boxes */
+.fractal-wrap{display:flex;flex-direction:column;gap:5px;margin-top:4px}
+.f-box{border-radius:6px;padding:7px 10px;font-size:11px;font-weight:600;display:flex;align-items:center;gap:8px}
+.f-box .f-icon{font-size:16px}
+.f1{background:rgba(255,220,50,.2);border:1px solid rgba(255,220,50,.4);color:#ffe066}
+.f2{background:rgba(50,220,180,.2);border:1px solid rgba(50,220,180,.4);color:#50e0c0}
+.f3{background:rgba(255,120,60,.2);border:1px solid rgba(255,120,60,.4);color:#ff9070}
+.f4{background:rgba(180,100,255,.2);border:1px solid rgba(180,100,255,.4);color:#d090ff}
+/* L-M Balance */
+.lm-wrap{display:flex;gap:8px;margin-top:8px}
+.lm-card{flex:1;border-radius:8px;padding:12px;text-align:center}
+.lm-l{background:rgba(255,160,30,.15);border:1px solid rgba(255,160,30,.4)}
+.lm-m{background:rgba(60,160,255,.15);border:1px solid rgba(60,160,255,.4)}
+.lm-icon{font-size:24px;margin-bottom:6px}
+.lm-title{font-size:13px;font-weight:700;margin-bottom:4px}
+.lm-items{font-size:11px;opacity:.8;line-height:1.6}
+.lm-warn{text-align:center;font-size:11px;margin-top:10px;opacity:.8;padding:6px;background:rgba(255,255,255,.08);border-radius:6px}
+/* 3 circles visual */
+.circles-wrap{position:relative;height:90px;margin:8px 0}
+.circle{position:absolute;width:70px;height:70px;border-radius:50%;border:2px solid;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;text-align:center;padding:4px;line-height:1.2}
+.c-profit{border-color:#F7C35F;background:rgba(247,195,95,.12);color:#F7C35F;top:10px;left:0}
+.c-passion{border-color:#60c9a4;background:rgba(96,201,164,.12);color:#60c9a4;top:10px;left:50%;transform:translateX(-50%)}
+.c-core{border-color:#a07cf8;background:rgba(160,124,248,.12);color:#a07cf8;top:10px;right:0}
+.c-center{position:absolute;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#1a1a3a;top:27px;left:50%;transform:translateX(-50%)}
+/* AA Steps */
+.aa-wrap{display:flex;flex-direction:column;gap:4px;margin-top:4px}
+.aa-step{display:flex;align-items:center;gap:8px;padding:6px 10px;background:rgba(255,255,255,.08);border-radius:6px;font-size:12px}
+.aa-num{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
+/* Wave cascade */
+.wave-wrap{margin-top:8px}
+.wave-row{display:flex;align-items:center;gap:4px;margin-bottom:5px}
+.w-box{background:rgba(255,255,255,.12);border-radius:4px;padding:4px 8px;font-size:11px;font-weight:600;white-space:nowrap}
+.w-arrow{font-size:14px;opacity:.6}
+/* Quote strip */
+.q-item{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.q-item:last-child{border-bottom:none}
+.q-mark{font-size:32px;line-height:1;opacity:.4;font-family:Georgia,serif;color:#F7C35F;flex-shrink:0;margin-top:-6px}
+.q-text{font-size:12px;line-height:1.6;opacity:.9;font-style:italic}
+.q-src{font-size:11px;opacity:.55;margin-top:3px;font-style:normal;font-weight:600}
+/* Summary bar */
+.sum-bar{background:linear-gradient(135deg,#F04E37,#F7C35F);padding:16px 24px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.3px;margin:0}
+.stat-row{display:flex;justify-content:center;gap:32px;margin-top:8px}
+.stat-item{text-align:center}
+.stat-num{font-size:22px;font-weight:900}
+.stat-lbl{font-size:10px;opacity:.85;font-weight:600;letter-spacing:.5px}
+/* Business plan box */
+.bp-wrap{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:12px;margin-top:10px}
+.bp-row{display:flex;gap:8px;margin-bottom:6px;align-items:flex-start;font-size:11px}
+.bp-label{font-weight:700;min-width:52px;opacity:.7;font-size:10px;text-transform:uppercase;letter-spacing:.5px;padding-top:1px}
+.bp-val{opacity:.9;line-height:1.4}
+</style>
+<div class="wrap">
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="hdr-title">⚔️ Nghệ thuật Chiến tranh Nhân dân<br>trong Quản trị Kinh doanh</div>
+    <div class="hdr-sub">FPT Mini MBA 2026 · Giáo sư Trương Gia Bình</div>
+    <div style="display:flex;justify-content:center;gap:8px;margin-top:10px;flex-wrap:wrap">
+      <span class="hdr-badge">🎯 6 Module kiến thức</span>
+      <span class="hdr-badge">🔑 Triết lý cốt lõi FPT</span>
+      <span class="hdr-badge">🚀 Ứng dụng thực tiễn</span>
+    </div>
+  </div>
+
+  <!-- GRID ROW 1 -->
+  <div class="grid2">
+    <!-- Block 1: Triết lý CTND -->
+    <div class="card card-1">
+      <span class="c-tag">🏛️ Module 01</span>
+      <div class="c-title">Triết lý Chiến tranh Nhân dân</div>
+      <div class="c-sub">Huy động toàn dân — Vượt đối thủ mọi tiềm lực</div>
+      <div class="item"><div class="dot">😷</div><div class="item-text"><span class="item-bold">Bệnh thái âm thời bình:</span> Mất đoàn kết, ngại thay đổi, cán bộ tách ra làm riêng</div></div>
+      <div class="item"><div class="dot">💡</div><div class="item-text"><span class="item-bold">Giải pháp:</span> Đẩy DN vào "không gian chiến tranh" — kích hoạt hy sinh, đoàn kết, sáng tạo</div></div>
+      <div class="bp-wrap">
+        <div style="font-size:11px;font-weight:700;opacity:.7;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">📋 Business Plan xuất sắc nhất lịch sử</div>
+        <div class="bp-row"><div class="bp-label">Mục tiêu</div><div class="bp-val">Đánh Pháp — Rõ ràng, đơn giản</div></div>
+        <div class="bp-row"><div class="bp-label">Nguồn lực</div><div class="bp-val">Toàn dân — bất kể già, trẻ, tôn giáo</div></div>
+        <div class="bp-row"><div class="bp-label">Phương thức</div><div class="bp-val">"Ai có súng dùng súng, ai có gươm dùng gươm…" – Huy động mọi thứ sẵn có</div></div>
+      </div>
+    </div>
+
+    <!-- Block 2: Fractal -->
+    <div class="card card-2">
+      <span class="c-tag">🔷 Module 02</span>
+      <div class="c-title">Đồ hình Fractal — Bí mật nhất quán</div>
+      <div class="c-sub">Lấy một mẩu nhỏ phóng to — thấy ngay toàn bộ tổng thể</div>
+      <div class="fractal-wrap">
+        <div class="f-box f1"><span class="f-icon">⬡</span>Cốt lõi đơn giản — Mục tiêu ai cũng hiểu</div>
+        <div class="f-box f2"><span class="f-icon">🔗</span>Cấu trúc nhất quán — Từ Bộ TT đến tiểu đội</div>
+        <div class="f-box f3"><span class="f-icon">🌀</span>Biến hóa khôn lường — Cấp dưới tự quyết thực địa</div>
+        <div class="f-box f4"><span class="f-icon">✨</span>Tráng lệ — Kết quả vượt trội</div>
+      </div>
+      <div class="item" style="margin-top:12px"><div class="dot">📡</div><div class="item-text"><span class="item-bold">Thông tin đa tuyến:</span> Ít nhất 3 đường — hữu tuyến, vô tuyến, liên lạc viên. Đường nóng báo thẳng cấp cao nhất.</div></div>
+    </div>
+  </div>
+
+  <!-- GRID ROW 2 -->
+  <div class="grid2">
+    <!-- Block 3: L-M -->
+    <div class="card card-3">
+      <span class="c-tag">⚖️ Module 03</span>
+      <div class="c-title">Cân bằng L – M</div>
+      <div class="c-sub">Mọi tổ chức bền vững đều cần cả hai vai trò song hành</div>
+      <div class="lm-wrap">
+        <div class="lm-card lm-l">
+          <div class="lm-icon">🦁</div>
+          <div class="lm-title" style="color:#F7C35F">Leader (L)</div>
+          <div class="lm-items">Tầm nhìn & Chiến lược<br>Tập hợp lực lượng<br>Cổ vũ động viên<br>Chấp nhận rủi ro</div>
+        </div>
+        <div class="lm-card lm-m">
+          <div class="lm-icon">🛡️</div>
+          <div class="lm-title" style="color:#60c9ff">Manager (M)</div>
+          <div class="lm-items">Lập kế hoạch chi tiết<br>Triển khai thực hiện<br>Kiểm soát & sửa sai<br>Kỷ luật & con số</div>
+        </div>
+      </div>
+      <div class="lm-warn">
+        ⚠️ <strong>Quá nhiều L</strong> → Hỗn loạn &nbsp;|&nbsp; <strong>Quá nhiều M</strong> → Chết dần<br>
+        💡 Lãnh đạo phải tìm <em>"nửa còn lại"</em> để bù trừ tố chất
+      </div>
+    </div>
+
+    <!-- Block 4: Ba Vòng tròn -->
+    <div class="card card-4">
+      <span class="c-tag">🎯 Module 04</span>
+      <div class="c-title">Chiến lược Ba Vòng Tròn</div>
+      <div class="c-sub">Chỉ làm những gì ở điểm giao thoa — "Làm gì mà đối thủ mất 15 năm?"</div>
+      <div class="circles-wrap">
+        <div class="circle c-profit">Lợi nhuận<br>chính<br>70–80% DT</div>
+        <div class="circle c-passion">Đam<br>mê<br>thực sự</div>
+        <div class="circle c-core">Sức<br>mạnh<br>cốt lõi</div>
+        <div class="c-center">⭐<br>WIN</div>
+      </div>
+      <div class="item" style="margin-top:4px"><div class="dot">💰</div><div class="item-text"><span class="item-bold">Vòng 1:</span> Ai là KH đem 70-80% DT? Tập trung phục vụ 2-3 năm tới.</div></div>
+      <div class="item"><div class="dot">❤️</div><div class="item-text"><span class="item-bold">Vòng 2:</span> Tổ chức thực sự say mê điều gì? Đam mê tạo nội lực.</div></div>
+      <div class="item"><div class="dot">🏆</div><div class="item-text"><span class="item-bold">Vòng 3:</span> Năng lực mà đối thủ cần 3–15 năm mới theo kịp.</div></div>
+    </div>
+  </div>
+
+  <!-- GRID ROW 3: 3 cols -->
+  <div class="grid3">
+    <!-- Block 5: AA Review -->
+    <div class="card card-5">
+      <span class="c-tag">🔄 Module 05</span>
+      <div class="c-title">Quy trình AA Review</div>
+      <div class="c-sub">Rút kinh nghiệm sau mọi chiến dịch</div>
+      <div class="aa-wrap">
+        <div class="aa-step"><div class="aa-num">1</div>Chúng ta định làm gì?</div>
+        <div class="aa-step"><div class="aa-num">2</div>Thực tế xảy ra điều gì?</div>
+        <div class="aa-step"><div class="aa-num">3</div>Tại sao có sự khác biệt?</div>
+        <div class="aa-step"><div class="aa-num">4</div>Đã làm tốt điều gì?</div>
+        <div class="aa-step"><div class="aa-num">5</div>Chưa làm tốt điều gì?</div>
+      </div>
+    </div>
+
+    <!-- Block 6: Tướng là Thầy -->
+    <div class="card card-6">
+      <span class="c-tag">🎓 Module 06</span>
+      <div class="c-title">Tướng là Thầy</div>
+      <div class="c-sub">Đào tạo theo làn sóng nhân lên</div>
+      <div class="wave-wrap">
+        <div class="wave-row"><div class="w-box">1 Tướng</div><div class="w-arrow">→</div><div class="w-box">10 người</div></div>
+        <div class="wave-row" style="padding-left:16px"><div class="w-box">10 người</div><div class="w-arrow">→</div><div class="w-box">100 người</div></div>
+        <div class="wave-row" style="padding-left:32px"><div class="w-box">100 người</div><div class="w-arrow">→</div><div class="w-box">1000+</div></div>
+      </div>
+      <div class="item" style="margin-top:10px"><div class="dot">📚</div><div class="item-text">Cấp trên xào nấu kiến thức thành bài giảng phù hợp</div></div>
+      <div class="item"><div class="dot">🏅</div><div class="item-text">Khen thưởng ngay trên chiến hào — không đợi kỳ tổng kết</div></div>
+    </div>
+
+    <!-- Block 7: Key Insight -->
+    <div class="card card-1">
+      <span class="c-tag">💡 Insight</span>
+      <div class="c-title">Bản chất con người Việt</div>
+      <div class="c-sub">Hiểu để lãnh đạo đúng cách</div>
+      <div class="item"><div class="dot">🌙</div><div class="item-text"><span class="item-bold">Thái Âm:</span> Tĩnh tại, ngại thay đổi khi ổn định</div></div>
+      <div class="item"><div class="dot">☀️</div><div class="item-text"><span class="item-bold">Thái Dương:</span> Bùng cháy sáng tạo khi có thách thức</div></div>
+      <div class="item"><div class="dot">🎯</div><div class="item-text"><span class="item-bold">Chiến lược:</span> Tạo môi trường áp lực liên tục để duy trì Dương</div></div>
+      <div style="margin-top:10px;padding:8px;background:rgba(255,220,50,.12);border:1px solid rgba(255,220,50,.3);border-radius:6px;font-size:11px;line-height:1.5;color:#ffe066">
+        "Đơn giản hóa để ai cũng có thể làm được — đó là cái giỏi của người Việt"
+      </div>
+    </div>
+  </div>
+
+  <!-- QUOTES STRIP -->
+  <div class="card-quote">
+    <div style="font-size:13px;font-weight:700;opacity:.6;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px">💬 Trích dẫn truyền cảm hứng từ bài giảng</div>
+    <div class="q-item">
+      <div class="q-mark">"</div>
+      <div>
+        <div class="q-text">Lạc nước hai xe đành bỏ phí, gặp thời một tốt cũng thành công. Đánh chiến tranh nhân dân là phải chọn cái thế lợi nhất mới đánh.</div>
+        <div class="q-src">— Hồ Chủ tịch (dẫn lại bởi GS. Trương Gia Bình)</div>
+      </div>
+    </div>
+    <div class="q-item">
+      <div class="q-mark">"</div>
+      <div>
+        <div class="q-text">Tướng xuất sắc là khi thắng trận, mọi cán bộ chiến sĩ đều nghĩ chính họ mới là người làm nên chiến thắng. Tướng kiệt xuất là khi đã qua đời, di sản và tinh thần vẫn dẫn dắt dân tộc đến thắng lợi cuối cùng.</div>
+        <div class="q-src">— Bài giảng Chiến tranh Nhân dân trong Quản trị Kinh doanh</div>
+      </div>
+    </div>
+    <div class="q-item">
+      <div class="q-mark">"</div>
+      <div>
+        <div class="q-text">Kinh doanh là phải làm những việc mà người khác không làm được, và nếu họ muốn làm thì phải mất nhiều tiền và nhiều thời gian.</div>
+        <div class="q-src">— GS. Trương Gia Bình</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUMMARY BAR -->
+  <div class="sum-bar">
+    <div style="font-size:11px;opacity:.85;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px">Tóm lược — 5 yếu tố sức mạnh cốt lõi</div>
+    <div class="stat-row">
+      <div class="stat-item"><div class="stat-num">⚔️ CTND</div><div class="stat-lbl">Toàn dân tham chiến</div></div>
+      <div class="stat-item"><div class="stat-num">🔷 Fractal</div><div class="stat-lbl">Nhất quán mọi cấp</div></div>
+      <div class="stat-item"><div class="stat-num">⚖️ L+M</div><div class="stat-lbl">Lãnh đạo song hành</div></div>
+      <div class="stat-item"><div class="stat-num">🎯 3V</div><div class="stat-lbl">Tập trung chiến lược</div></div>
+      <div class="stat-item"><div class="stat-num">🎓 AA</div><div class="stat-lbl">Học hỏi liên tục</div></div>
+    </div>
+  </div>
+</div>
